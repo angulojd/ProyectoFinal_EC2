@@ -29,7 +29,7 @@ cur = conn.cursor()
 
 r=read_query(conn, "select Hora, Valor, Lugar from INVEMAR where Valor<150")
 o=read_query(conn, "select Hora, avg(Valor) from INVEMAR group by Hora order by Hora")
-q=read_query(conn, "select Hora, max(Valor) from INVEMAR where Lugar='Punta Betin' group by Hora order by Hora")
+q=read_query(conn, "select Hora, max(Valor) from INVEMAR where Lugar='Barranquilla' group by Hora order by Hora")
 
 cur.close() 
 conn.close()
